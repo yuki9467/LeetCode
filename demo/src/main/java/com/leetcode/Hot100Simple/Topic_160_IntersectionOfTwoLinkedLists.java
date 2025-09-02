@@ -8,14 +8,6 @@ import java.util.Set;
  *  输入 listA = [4,1,8,4,5], listB = [5,6,1,8,4,5]
  *  输出 Intersected at '8'
  */
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) {
-          val = x;
-          next = null;
-     }
-  }
 public class Topic_160_IntersectionOfTwoLinkedLists {
 
     // 方法一：双指针

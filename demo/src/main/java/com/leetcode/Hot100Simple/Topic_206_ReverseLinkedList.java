@@ -4,16 +4,14 @@ package com.leetcode.Hot100Simple;
  *  输入：head = [1,2,3,4,5]
     输出：[5,4,3,2,1]
  */
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
-
 public class Topic_206_ReverseLinkedList {
 
+    /*  三指针：时间复杂度是O(n),因为每个节点都访问一次，空间复杂度是O(1)
+        比如 1->2->3->null 
+        * 第一次：1->null, 2->3->null , prev is 1, curr is 2
+        * 第二次：2->1->null, 3->null, prev is 2, curr is 3
+        * 第三次：3->2->1->null, prev is 3, curr is null
+    */
     private static ListNode reverseLinkedList(ListNode head){
         if (head == null) return null;
 
