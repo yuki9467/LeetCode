@@ -16,12 +16,12 @@ public class Topic_21_MergeTwoSortedLists {
     private static ListNode mergeTwoLists(ListNode l1, ListNode l2){
          // 创建哨兵节点简化边界处理
         ListNode dummy = new ListNode(-1);
-        ListNode curr = dummy;
+        ListNode curr = dummy;// curr和dummy指向-1节点
         
         // 遍历两个链表
         while (l1 != null && l2 != null) {
             if (l1.val <= l2.val) {
-                curr.next = l1;
+                curr.next = l1;// 为什么这块同时改变dummy.next=l1? 这一步让curr指向的节点的next指针指向l1指向的节点
                 l1 = l1.next;
             }else{
                 curr.next = l2;
